@@ -5,9 +5,7 @@ const iframe = document.querySelector("iframe");
 const player = new Vimeo.Player(iframe);
 const STORAGE_KEY = "videoplayer-current-time";
 
-const onPlay  = function(data) {
 
-};
 localStorage.setItem(STORAGE_KEY, data.seconds);
 const onPlay = throttle((data) =>  {
     localStorage.setItem(STORAGE_KEY, data.seconds); 
